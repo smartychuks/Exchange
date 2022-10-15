@@ -27,7 +27,7 @@ export const getTokensAfterRemove = async (provider, removeLPTokenWei, _ethBalan
         const _totalSupply = await exchangeContract.totalSupply();
         const _removeEther = _ethBalance.mul(removeLPTokenWei).div(_totalSupply);
         const _removeCD = cryptoManiaTokenReserve.mul(removeLPTokenWei).div(_totalSupply);
-        return{_removeEther, _removeCD};
+        return{_removeEther, _removeCM};
     } catch (error) {
         console.error(error);
     }
